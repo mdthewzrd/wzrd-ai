@@ -1,0 +1,50 @@
+/* Platform button styles */
+.bg-instagram-from {
+  --tw-gradient-from: #833ab4;
+  --tw-gradient-to: #fd1d1d;
+  --tw-gradient-stops: var(--tw-gradient-from), #fcb045, var(--tw-gradient-to);
+}
+
+.bg-instagram-via {
+  --tw-gradient-via: #fcb045;
+}
+
+.bg-instagram-to {
+  --tw-gradient-to: #fd1d1d;
+}
+
+.bg-youtube {
+  background-color: #ff0000;
+}
+
+.bg-tiktok {
+  background-color: #000000;
+}
+
+.bg-twitter {
+  background-color: #1da1f2;
+}
+
+.bg-spotify {
+  background-color: #1db954;
+}
+
+.bg-linkedin {
+  background-color: #0077b5;
+}
+
+.platform-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.platform-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

@@ -1,0 +1,55 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+      <div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
+        <div className="text-center space-y-8 max-w-3xl">
+          <h1 className="text-6xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+            Inflnce.io
+          </h1>
+          
+          <p className="text-xl text-muted-foreground">
+            The premier white-label reseller platform for digital services. 
+            Empower your agency with instant branding and seamless checkout.
+          </p>
+          
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/login">
+              <Button size="lg" className="min-w-[150px]">
+                Get Started
+              </Button>
+            </Link>
+            <Link href="/demo">
+              <Button size="lg" variant="outline" className="min-w-[150px]">
+                View Demo
+              </Button>
+            </Link>
+          </div>
+          
+          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold">Multi-Tenant Ready</h3>
+              <p className="text-sm text-muted-foreground">
+                Manage multiple resellers with custom branding and domains
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold">Stripe Integration</h3>
+              <p className="text-sm text-muted-foreground">
+                Secure payments with Stripe Checkout, no PCI compliance needed
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold">White-Label Design</h3>
+              <p className="text-sm text-muted-foreground">
+                Fully customizable themes with your brand colors and logo
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -145,7 +145,7 @@ export default async function SpecialtyPublicationsPage() {
         <div className="max-w-4xl mx-auto text-center bg-gray-900/50 rounded-lg p-12 border border-gray-800">
           <h2 className="text-3xl font-bold mb-4 text-white">Need Something Custom?</h2>
           <p className="text-muted-foreground mb-8">
-            Don't see the exact placement you need? We work with hundreds of media partners to create custom campaigns.
+            Don&apos;t see the exact placement you need? We work with hundreds of media partners to create custom campaigns.
           </p>
           <div className="flex justify-center gap-4">
             <Button size="lg" className="green-gradient-bg">

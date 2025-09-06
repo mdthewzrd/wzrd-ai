@@ -5,7 +5,7 @@ import Footer from "@/components/shared/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 
 export default async function ContactPage() {
   const { userId } = await auth();
@@ -39,7 +39,7 @@ export default async function ContactPage() {
             <CardHeader>
               <CardTitle className="text-2xl text-white">Send us a message</CardTitle>
               <CardDescription>
-                Tell us about your project and we'll get back to you within 24 hours
+                Tell us about your project and we&apos;ll get back to you within 24 hours
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">

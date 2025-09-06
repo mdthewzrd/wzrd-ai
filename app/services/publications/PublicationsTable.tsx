@@ -109,7 +109,7 @@ const publicationsData = [
 
 export default function PublicationsTable() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [activeGenres, setActiveGenres] = useState([]);
+  const [activeGenres, setActiveGenres] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [priceRange, setPriceRange] = useState([0, 300]);
 

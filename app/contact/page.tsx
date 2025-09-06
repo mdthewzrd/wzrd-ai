@@ -5,7 +5,6 @@ import Footer from "@/components/shared/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default async function ContactPage() {
@@ -90,10 +89,10 @@ export default async function ContactPage() {
                 <label className="text-sm font-medium text-gray-300 mb-2 block">
                   Message
                 </label>
-                <Textarea 
+                <textarea 
                   placeholder="Tell us about your project requirements..."
                   rows={6}
-                  className="bg-gray-800/50 border-gray-700 text-white"
+                  className="flex min-h-[80px] w-full rounded-md border border-gray-700 bg-gray-800/50 px-3 py-2 text-sm text-white placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
               

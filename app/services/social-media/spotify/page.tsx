@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
@@ -10,11 +8,7 @@ import { Check, Star, Zap, TrendingUp } from "lucide-react";
 import SpotifyServiceSelector from "./SpotifyServiceSelector";
 
 export default async function SpotifyServicesPage() {
-  const { userId } = await auth();
   
-  if (!userId) {
-    redirect("/sign-in");
-  }
   const spotifyServices = getServicesByPlatform("spotify");
 
   const platformButtons = [
@@ -66,11 +60,21 @@ export default async function SpotifyServicesPage() {
                 </p>
               </div>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+          </div>
+        </div>
+      </div>
+
+      {/* Service Selection - Client Component */}
+      <SpotifyServiceSelector services={spotifyServices} />
+
+      {/* Feature Badges */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-green-500/20 border border-green-500/30 p-4 rounded-lg text-center">
                 <Zap className="h-6 w-6 text-green-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">24h Start</p>
+                <p className="text-sm font-medium text-white">Fast Delivery</p>
               </div>
               <div className="bg-green-500/20 border border-green-500/30 p-4 rounded-lg text-center">
                 <TrendingUp className="h-6 w-6 text-green-400 mx-auto mb-2" />
@@ -78,19 +82,16 @@ export default async function SpotifyServicesPage() {
               </div>
               <div className="bg-green-500/20 border border-green-500/30 p-4 rounded-lg text-center">
                 <Star className="h-6 w-6 text-green-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">High Quality</p>
+                <p className="text-sm font-medium text-white">Premium Quality</p>
               </div>
               <div className="bg-green-500/20 border border-green-500/30 p-4 rounded-lg text-center">
                 <Check className="h-6 w-6 text-green-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">Guaranteed</p>
+                <p className="text-sm font-medium text-white">Safe & Secure</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Service Selection - Client Component */}
-      <SpotifyServiceSelector services={spotifyServices} />
 
       {/* FAQ Section */}
       <div className="container mx-auto px-4 py-16">

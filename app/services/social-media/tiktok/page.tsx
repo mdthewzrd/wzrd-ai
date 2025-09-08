@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
@@ -10,11 +8,7 @@ import { Check, Star, Zap, TrendingUp } from "lucide-react";
 import TikTokServiceSelector from "./TikTokServiceSelector";
 
 export default async function TikTokServicesPage() {
-  const { userId } = await auth();
   
-  if (!userId) {
-    redirect("/sign-in");
-  }
   const tiktokServices = getServicesByPlatform("tiktok");
 
   const platformButtons = [
@@ -66,31 +60,38 @@ export default async function TikTokServicesPage() {
                 </p>
               </div>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
-                <Zap className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">24h Start</p>
-              </div>
-              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
-                <TrendingUp className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">Viral Growth</p>
-              </div>
-              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
-                <Star className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">High Quality</p>
-              </div>
-              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
-                <Check className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm font-medium text-white">Guaranteed</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Service Selection - Client Component */}
       <TikTokServiceSelector services={tiktokServices} />
+
+      {/* Feature Badges */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
+                <Zap className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
+                <p className="text-sm font-medium text-white">Fast Delivery</p>
+              </div>
+              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
+                <TrendingUp className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
+                <p className="text-sm font-medium text-white">Real Growth</p>
+              </div>
+              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
+                <Star className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
+                <p className="text-sm font-medium text-white">Premium Quality</p>
+              </div>
+              <div className="bg-gradient-to-r from-cyan-400/20 to-pink-500/20 border border-cyan-400/30 p-4 rounded-lg text-center">
+                <Check className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
+                <p className="text-sm font-medium text-white">Safe & Secure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* FAQ Section */}
       <div className="container mx-auto px-4 py-16">

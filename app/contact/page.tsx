@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,11 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Mail, MapPin, Clock } from "lucide-react";
 
 export default async function ContactPage() {
-  const { userId } = await auth();
-  
-  if (!userId) {
-    redirect("/sign-in");
-  }
 
   return (
     <div className="min-h-screen bg-background">

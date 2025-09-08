@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,12 +6,12 @@ import { ArrowRight, Bot, Code2, Search, Shield } from "lucide-react";
 
 const tools = [
   {
-    id: "email-automation",
-    name: "Email Automation",
+    id: "automation-tools",
+    name: "Automation Tools",
     icon: <Bot className="h-12 w-12 text-green-500" />,
     href: "/services/tools/email-automation",
-    description: "Streamline your email marketing workflow with our powerful automation tools.",
-    actionText: "Explore Email Automation",
+    description: "Streamline your business with email, chatbot, social media, and workflow automation.",
+    actionText: "Explore Automation Tools",
     bgColor: "bg-gray-900/50"
   },
   {
@@ -46,11 +44,6 @@ const tools = [
 ];
 
 export default async function ToolsServicesPage() {
-  const { userId } = await auth();
-  
-  if (!userId) {
-    redirect("/sign-in");
-  }
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">

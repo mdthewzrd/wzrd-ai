@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-4">
-              Inflnce
+              inflnce.io
             </h3>
             <p className="text-sm text-gray-400">
               Premium B2B wholesale platform for digital marketing and social media services.
@@ -81,7 +81,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              © 2024 Inflnce. All rights reserved.
+              © 2024 inflnce.io. All rights reserved.
             </p>
             <div className="flex gap-4 text-sm text-gray-400">
               <span>Wholesale Platform</span>

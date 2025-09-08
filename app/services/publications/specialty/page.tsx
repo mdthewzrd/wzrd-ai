@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,11 +7,6 @@ import { Tv, Podcast, Smartphone, Monitor } from "lucide-react";
 import Link from "next/link";
 
 export default async function SpecialtyPublicationsPage() {
-  const { userId } = await auth();
-  
-  if (!userId) {
-    redirect("/sign-in");
-  }
 
   const specialtyPlacements = [
     {

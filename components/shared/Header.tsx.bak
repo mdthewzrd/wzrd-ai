@@ -124,26 +124,14 @@ export default function Header() {
           {/* User account section */}
           <div className="hidden md:flex items-center">
             {isSignedIn ? (
-              <div className="flex items-center gap-3">
-                <Button variant="ghost" asChild>
-                  <Link href="/dashboard">Dashboard</Link>
-                </Button>
-                <UserButton 
-                  afterSignOutUrl="/"
-                  appearance={{
-                    elements: {
-                      avatarBox: "h-10 w-10"
-                    }
-                  }}
-                />
-              </div>
+              <UserButton afterSignOutUrl="/" />
             ) : (
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/sign-in">Sign In</Link>
                 </Button>
                 <Button size="sm" className="green-gradient-bg" asChild>
-                  <Link href="/sign-in">Sign In</Link>
+                  <Link href="/sign-up">Get Started</Link>
                 </Button>
               </div>
             )}

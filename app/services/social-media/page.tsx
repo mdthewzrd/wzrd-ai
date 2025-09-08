@@ -31,11 +31,6 @@ const platformButtons = [
     href: "/services/social-media/spotify",
     className: "bg-green-500 text-white",
   },
-  { 
-    name: "LinkedIn", 
-    href: "/services/social-media/linkedin",
-    className: "bg-blue-600 text-white",
-  },
 ];
 
 const featuredPlatforms = [

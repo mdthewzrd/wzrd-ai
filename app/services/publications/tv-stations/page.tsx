@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
@@ -7,11 +5,6 @@ import { Button } from "@/components/ui/button";
 import TVStationsTable from "./TVStationsTable";
 
 export default async function TVStationsPage() {
-  const { userId } = await auth();
-  
-  if (!userId) {
-    redirect("/sign-in");
-  }
 
   return (
     <div className="min-h-screen bg-background">

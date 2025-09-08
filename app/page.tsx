@@ -1,239 +1,310 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import { ArrowRight, Users, Shield, BarChart3, Globe } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Simple Header - No Clerk components */}
-      <header className="border-b bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center pl-8 pr-12">
-              <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                inflnce.io
-              </span>
-            </Link>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/services/social-media" className="text-gray-300 hover:text-white transition-colors">
-                Social Media
-              </Link>
-              <Link href="/services/publications" className="text-gray-300 hover:text-white transition-colors">
-                Publications
-              </Link>
-              <Link href="/services/tools" className="text-gray-300 hover:text-white transition-colors">
-                Tools
-              </Link>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <Link href="/sign-in">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">
-                  Sign In
-                </Button>
-              </Link>
-              <Link href="/sign-up">
-                <Button className="bg-green-500 hover:bg-green-600 text-white">
-                  Get Started
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        {/* Animated gradient background */}
+        {/* Animated gradient background - green focused */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-900">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/[0.02] via-blue-500/[0.02] to-purple-500/[0.02] animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/[0.05] to-green-600/[0.03] animate-pulse"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
-            Scale Your Digital
-            <span className="block bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Presence Today
+        {/* Floating social media icons */}
+        <div className="absolute inset-0 pointer-events-none z-10">
+          {/* Instagram - top left */}
+          <div className="absolute top-1/4 left-1/6 p-3 rounded-2xl bg-gradient-to-r from-purple-500/15 to-pink-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-purple-500/5">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+              <div className="w-5 h-5 border-2 border-white rounded-lg relative">
+                <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-white rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* YouTube - top right */}
+          <div className="absolute top-1/4 right-1/6 p-3 rounded-2xl bg-red-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-red-500/5" style={{animationDelay: '0.5s'}}>
+            <div className="w-8 h-8 rounded-xl bg-red-500 flex items-center justify-center">
+              <div className="w-0 h-0 border-l-[3px] border-l-white border-y-[2px] border-y-transparent ml-0.5"></div>
+            </div>
+          </div>
+
+          {/* TikTok - bottom left */}
+          <div className="absolute bottom-1/4 left-1/5 p-3 rounded-2xl bg-gradient-to-r from-cyan-400/15 to-pink-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-cyan-500/5" style={{animationDelay: '1s'}}>
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center">
+              <div className="text-white font-bold text-sm">♪</div>
+            </div>
+          </div>
+
+          {/* Twitter/X - bottom right */}
+          <div className="absolute bottom-1/4 right-1/5 p-3 rounded-2xl bg-blue-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-blue-500/5" style={{animationDelay: '1.5s'}}>
+            <div className="w-8 h-8 rounded-xl bg-blue-500 flex items-center justify-center">
+              <div className="text-white font-bold text-sm">𝕏</div>
+            </div>
+          </div>
+
+          {/* Spotify - middle left */}
+          <div className="absolute top-1/2 left-1/12 p-3 rounded-2xl bg-green-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-green-500/5" style={{animationDelay: '2s'}}>
+            <div className="w-8 h-8 rounded-xl bg-green-500 flex items-center justify-center">
+              <div className="text-white font-bold text-lg">♫</div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="container relative mx-auto px-4 text-center z-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-green-400 border border-green-400/30 bg-green-400/10 mb-6">
+                Premium Social Media Marketing Platform
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="text-white">Boost Your Online</span>
+              <br />
+              <span className="text-white">Presence with </span>
+              <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
+                inflnce
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Your one-stop platform for social media growth, publications, and digital marketing tools.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="green-gradient-bg h-12 px-8" asChild>
+                <Link href="/sign-up">
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8 border-gray-600 text-gray-300 hover:bg-gray-800" asChild>
+                <Link href="/services">
+                  Learn More
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-gray-950">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-green-400 border border-green-400/30 bg-green-400/10 mb-6">
+              Our Services
             </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Premium wholesale platform for digital marketing and social media services. 
-            Get authentic growth, professional publications, and cutting-edge tools.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg">
-                Explore Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-4 text-lg">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose inflnce.io?</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Professional-grade digital marketing solutions trusted by businesses worldwide
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Comprehensive Services</h2>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Everything you need to grow your online presence and reach your target audience effectively.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors">
-              <CardHeader className="text-center pb-2">
-                <Users className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                <CardTitle className="text-white">Authentic Growth</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-gray-900/50 border-gray-800 hover:border-green-500/50 transition-all">
+              <CardHeader className="text-center pb-4">
+                <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <Users className="h-8 w-8 text-green-500" />
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">Social Media Growth</CardTitle>
                 <CardDescription className="text-gray-400">
-                  Real followers, genuine engagement, and sustainable growth across all platforms
+                  Expand your reach across all major platforms including Instagram, TikTok, YouTube, Twitter, LinkedIn, and Spotify.
                 </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Follower growth campaigns</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Engagement optimization</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Content promotion</span>
+                </div>
+                <Link href="/services/social-media" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium mt-6">
+                  Explore Social Media
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors">
-              <CardHeader className="text-center pb-2">
-                <Shield className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-                <CardTitle className="text-white">Secure & Safe</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
+            <Card className="bg-gray-900/50 border-gray-800 hover:border-green-500/50 transition-all">
+              <CardHeader className="text-center pb-4">
+                <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <div className="w-8 h-8 border-2 border-green-500 rounded flex items-center justify-center">
+                    <div className="w-3 h-3 bg-green-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">Publication Features</CardTitle>
                 <CardDescription className="text-gray-400">
-                  Industry-leading security practices and 24/7 monitoring for your peace of mind
+                  Get featured in reputable publications to boost your credibility and reach new audiences.
                 </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Press release distribution</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Featured articles</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Industry-specific publications</span>
+                </div>
+                <Link href="/services/publications" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium mt-6">
+                  Explore Publications
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors">
-              <CardHeader className="text-center pb-2">
-                <BarChart3 className="h-12 w-12 text-purple-500 mx-auto mb-4" />
-                <CardTitle className="text-white">Data-Driven</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
+            <Card className="bg-gray-900/50 border-gray-800 hover:border-green-500/50 transition-all">
+              <CardHeader className="text-center pb-4">
+                <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <div className="relative">
+                    <div className="w-6 h-6 border-2 border-green-500 rounded" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl text-white mb-2">Digital Marketing Tools</CardTitle>
                 <CardDescription className="text-gray-400">
-                  Advanced analytics and insights to optimize your digital marketing strategy
+                  Access powerful tools to enhance your online marketing strategy and drive results.
                 </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors">
-              <CardHeader className="text-center pb-2">
-                <Globe className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                <CardTitle className="text-white">Global Reach</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-gray-400">
-                  Worldwide services with local expertise in major markets and industries
-                </CardDescription>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">SEO optimization</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Web development</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-gray-300">Knowledge panel creation</span>
+                </div>
+                <Link href="/services/tools" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium mt-6">
+                  Explore Tools
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20">
+      {/* Why Choose Us Section */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Everything you need to dominate the digital landscape
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-green-400 border border-green-400/30 bg-green-400/10 mb-6">
+              Why Choose Us
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Why Choose inflnce</h2>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              We provide comprehensive solutions to help businesses and individuals establish a strong online presence.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:from-purple-500/15 hover:to-pink-500/15 transition-all">
-              <CardHeader>
-                <CardTitle className="text-white text-2xl">Social Media Growth</CardTitle>
-                <CardDescription className="text-gray-300 text-lg">
-                  Instagram, YouTube, TikTok, Twitter, and Spotify promotion services
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/services/social-media">
-                  <Button className="w-full bg-purple-500 hover:bg-purple-600">
-                    Explore Social Media
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-gray-900 border-gray-800 text-center">
+              <CardContent className="p-8">
+                <div className="h-14 w-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <Globe className="h-7 w-7 text-green-500" />
+                </div>
+                <CardTitle className="text-xl text-white mb-4">Global Reach</CardTitle>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Connect with audiences worldwide through our extensive network of platforms and publications.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/20 hover:from-blue-500/15 hover:to-cyan-500/15 transition-all">
-              <CardHeader>
-                <CardTitle className="text-white text-2xl">Press & Publications</CardTitle>
-                <CardDescription className="text-gray-300 text-lg">
-                  Get featured in top publications and media outlets worldwide
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/services/publications">
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                    View Publications
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+            <Card className="bg-gray-900 border-gray-800 text-center">
+              <CardContent className="p-8">
+                <div className="h-14 w-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <Shield className="h-7 w-7 text-green-500" />
+                </div>
+                <CardTitle className="text-xl text-white mb-4">Trusted Results</CardTitle>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Our proven strategies deliver measurable outcomes and sustainable growth for your brand.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-500/20 hover:from-green-500/15 hover:to-emerald-500/15 transition-all">
-              <CardHeader>
-                <CardTitle className="text-white text-2xl">Digital Tools</CardTitle>
-                <CardDescription className="text-gray-300 text-lg">
-                  Advanced automation, SEO, and marketing tools for your business
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href="/services/tools">
-                  <Button className="w-full bg-green-500 hover:bg-green-600">
-                    Discover Tools
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+            <Card className="bg-gray-900 border-gray-800 text-center">
+              <CardContent className="p-8">
+                <div className="h-14 w-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <div className="w-7 h-7 border-2 border-green-500 rounded flex items-center justify-center">
+                    <div className="w-2 h-2 bg-green-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl text-white mb-4">Premium Quality</CardTitle>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  We maintain the highest standards across all our services to ensure exceptional results.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900 border-gray-800 text-center">
+              <CardContent className="p-8">
+                <div className="h-14 w-14 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+                  <BarChart3 className="h-7 w-7 text-green-500" />
+                </div>
+                <CardTitle className="text-xl text-white mb-4">Data-Driven</CardTitle>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Our strategies are backed by analytics and market insights to maximize your ROI.
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Simple Footer */}
-      <footer className="bg-gray-950 border-t border-gray-800">
-        <div className="container mx-auto px-4 py-12">
-          <div className="text-center">
-            <div className="mb-8">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                inflnce.io
-              </Link>
-            </div>
-            <p className="text-gray-400 mb-8">
-              Premium wholesale platform for digital marketing and social media services
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-950 border-t border-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-green-400 border border-green-400/30 bg-green-400/10 mb-6">
+              Get Started Today
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Ready to Elevate Your Online Presence?
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+              Join thousands of businesses and individuals who have transformed their digital footprint with inflnce.io.
             </p>
-            <div className="flex justify-center space-x-8">
-              <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                Contact
-              </Link>
-              <Link href="/sign-in" className="text-gray-400 hover:text-white transition-colors">
-                Sign In
-              </Link>
-            </div>
-            <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-500 text-sm">
-                © 2024 inflnce.io. All rights reserved.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="green-gradient-bg h-12 px-8" asChild>
+                <Link href="/sign-up">
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8 border-gray-600 text-gray-300 hover:bg-gray-800" asChild>
+                <Link href="/services">
+                  Learn More
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
+      
+      <Footer />
     </div>
   );
 }

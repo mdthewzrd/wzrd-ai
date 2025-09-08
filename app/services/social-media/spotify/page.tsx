@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
@@ -10,11 +8,6 @@ import { Check, Star, Zap, TrendingUp } from "lucide-react";
 import SpotifyServiceSelector from "./SpotifyServiceSelector";
 
 export default async function SpotifyServicesPage() {
-  const { userId } = await auth();
-  
-  if (!userId) {
-    redirect("/sign-in");
-  }
   const spotifyServices = getServicesByPlatform("spotify");
 
   const platformButtons = [

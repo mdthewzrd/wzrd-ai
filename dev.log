@@ -54,3 +54,158 @@ JIT TOTAL: 34.937ms
 
  ✓ Compiled in 1614ms (389 modules)
  GET / 200 in 48ms
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 2.463ms
+Reading changed files: 4.984ms
+Sorting candidates: 0.098ms
+Generate rules: 0.971ms
+Build stylesheet: 0.003ms
+Potential classes:  261
+Active contexts:  1
+JIT TOTAL: 23.148ms
+
+
+ ✓ Compiled in 154ms (389 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 3.447ms
+Reading changed files: 12.131ms
+Sorting candidates: 0.343ms
+Generate rules: 5.586ms
+Build stylesheet: 1.601ms
+Potential classes:  918
+Active contexts:  1
+JIT TOTAL: 33.185ms
+
+
+ ✓ Compiled in 723ms (1388 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 2.201ms
+Reading changed files: 4.202ms
+Sorting candidates: 0.112ms
+Generate rules: 1.055ms
+Build stylesheet: 0.001ms
+Potential classes:  260
+Active contexts:  1
+JIT TOTAL: 19.345ms
+
+
+ ✓ Compiled in 109ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 5.08ms
+Reading changed files: 5.898ms
+Sorting candidates: 0.176ms
+Generate rules: 4.219ms
+Build stylesheet: 0.002ms
+Potential classes:  331
+Active contexts:  1
+JIT TOTAL: 31.44ms
+
+
+ ✓ Compiled in 148ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 3.679ms
+Reading changed files: 4.447ms
+Sorting candidates: 0.111ms
+Generate rules: 2.451ms
+Build stylesheet: 0.001ms
+Potential classes:  259
+Active contexts:  1
+JIT TOTAL: 23.035ms
+
+
+ ✓ Compiled in 120ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 3.577ms
+Reading changed files: 4.639ms
+Sorting candidates: 0.013ms
+Generate rules: 0.097ms
+Build stylesheet: 0.001ms
+Potential classes:  22
+Active contexts:  1
+JIT TOTAL: 24.798ms
+
+
+ ✓ Compiled in 141ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 2.672ms
+Reading changed files: 4.663ms
+Sorting candidates: 0.121ms
+Generate rules: 1.552ms
+Build stylesheet: 0.002ms
+Potential classes:  252
+Active contexts:  1
+JIT TOTAL: 25.797ms
+
+
+ ✓ Compiled in 143ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 4.705ms
+Reading changed files: 5.412ms
+Sorting candidates: 0.113ms
+Generate rules: 1.008ms
+Build stylesheet: 0.001ms
+Potential classes:  259
+Active contexts:  1
+JIT TOTAL: 24.361ms
+
+
+ ✓ Compiled in 121ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 11.395ms
+Reading changed files: 30.892ms
+Sorting candidates: 0.277ms
+Generate rules: 8.819ms
+Build stylesheet: 0.009ms
+Potential classes:  370
+Active contexts:  1
+JIT TOTAL: 98.625ms
+
+
+ ✓ Compiled in 479ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 4.003ms
+Reading changed files: 9.498ms
+Sorting candidates: 0.197ms
+Generate rules: 4.928ms
+Build stylesheet: 2.925ms
+Potential classes:  370
+Active contexts:  1
+JIT TOTAL: 43.344ms
+
+
+ ✓ Compiled in 221ms (518 modules)
+
+
+Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
+Finding changed files: 5.307ms
+Reading changed files: 15.21ms
+Sorting candidates: 0.122ms
+Generate rules: 3.029ms
+Build stylesheet: 0.007ms
+Potential classes:  338
+Active contexts:  1
+JIT TOTAL: 45.65ms
+
+
+ ✓ Compiled in 194ms (518 modules)
+[?25h

@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { ClerkProvider } from '@clerk/nextjs';
+import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,10 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased`} style={{ backgroundColor: '#030712', color: '#f9fafb' }}>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="dark">
+        <body className={`${inter.className} antialiased`} style={{ backgroundColor: '#030712', color: '#f9fafb' }}>
+          <ConvexClientProvider>
+            {children}
+            <Toaster richColors position="bottom-right" />
+          </ConvexClientProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

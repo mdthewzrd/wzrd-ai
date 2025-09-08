@@ -19,17 +19,6 @@ export default async function PublicationsServicesPage() {
               Get featured in top publications and media outlets worldwide
             </p>
             
-            {/* Navigation Links */}
-            <div className="flex justify-center gap-4 mb-8">
-              <Button className="bg-green-500 hover:bg-green-600 text-white">
-                PR & Press Publications
-              </Button>
-              <Link href="/services/publications/specialty">
-                <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800">
-                  Specialty Placements
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </div>

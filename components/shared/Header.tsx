@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, ShoppingBag, Settings } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState } from "react";
 
 const mainNavItems = [
@@ -16,7 +17,6 @@ const mainNavItems = [
 
 export default function Header() {
   const pathname = usePathname();
-  const { isSignedIn } = useAuth();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -82,57 +82,13 @@ export default function Header() {
 
           {/* Action buttons */}
           <div className="hidden md:flex items-center gap-2">
-            {isSignedIn && (
-              <>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button variant="ghost" size="icon" className="text-muted-foreground" asChild>
-                        <Link href="/dashboard/orders">
-                          <ShoppingBag className="h-5 w-5" />
-                        </Link>
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>My Orders</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-
-                {isAdmin && (
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button variant="ghost" size="icon" className="text-muted-foreground" asChild>
-                          <Link href="/admin">
-                            <Settings className="h-5 w-5" />
-                          </Link>
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Admin Settings</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                )}
-              </>
-            )}
           </div>
           
           {/* User account section */}
           <div className="hidden md:flex items-center">
-            {isSignedIn ? (
-              <UserButton afterSignOutUrl="/" />
-            ) : (
-              <div className="flex items-center gap-2">
-                <Button variant="ghost" size="sm" asChild>
-                  <Link href="/sign-in">Sign In</Link>
-                </Button>
-                <Button size="sm" className="green-gradient-bg" asChild>
-                  <Link href="/sign-up">Get Started</Link>
-                </Button>
-              </div>
-            )}
+            <Button className="green-gradient-bg">
+              Get Started
+            </Button>
           </div>
         </div>
         
@@ -148,7 +104,6 @@ export default function Header() {
             <Search className="h-5 w-5" />
           </Button>
 
-          {isSignedIn && <UserButton afterSignOutUrl="/" />}
 
           {/* Mobile menu button */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -173,52 +128,14 @@ export default function Header() {
                   </Link>
                 ))}
                 
-                {isSignedIn ? (
-                  <>
-                    <hr className="border-border" />
-                    <Link 
-                      href="/dashboard" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      Dashboard
-                    </Link>
-                    <Link 
-                      href="/dashboard/orders" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      My Orders
-                    </Link>
-                    {isAdmin && (
-                      <Link 
-                        href="/admin" 
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-base font-medium text-muted-foreground hover:text-primary"
-                      >
-                        Admin Panel
-                      </Link>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <hr className="border-border" />
-                    <Link 
-                      href="/sign-in" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      Sign In
-                    </Link>
-                    <Link 
-                      href="/sign-up" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      Get Started
-                    </Link>
-                  </>
-                )}
+                <hr className="border-border" />
+                <Link 
+                  href="/contact" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-base font-medium text-muted-foreground hover:text-primary"
+                >
+                  Contact Us
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>

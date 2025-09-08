@@ -89,13 +89,251 @@
   --text-secondary: 0 0% 70%;
 }
 
-/* Prevent horizontal scrolling on mobile */
+/* Base styles */
 html,
 body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
   scroll-behavior: smooth;
+  background: hsl(222, 47%, 3%);
+  color: hsl(0, 0%, 98%);
+}
+
+/* Platform-specific gradients */
+.instagram-gradient {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcaf45);
+}
+
+.tiktok-gradient {
+  background: linear-gradient(45deg, #000000, #25f4ee, #fe2c55);
+}
+
+.youtube-gradient {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+.twitter-gradient {
+  background: linear-gradient(45deg, #1da1f2, #0d8bd9);
+}
+
+.spotify-gradient {
+  background: linear-gradient(45deg, #1db954, #1aa34a);
+}
+
+.linkedin-gradient {
+  background: linear-gradient(45deg, #0077b5, #005885);
+}
+
+.brand-gradient {
+  background: linear-gradient(to right, #007b01, #00c802);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.pulse-animation {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-scale-sm:hover {
+  transform: scale(1.02);
+}
+
+/* Logo hover effect */
+.logo-hover-effect {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.logo-hover-effect:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+/* Card glassmorphism effect */
+.glass-card {
+  background: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(222, 47%, 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(142, 76%, 36%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(142, 76%, 46%);
+}
+
+/* Text gradient utilities */
+.text-gradient-green {
+  background: linear-gradient(to right, #22c55e, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(to right, #007b01, #00c802);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Base styles */

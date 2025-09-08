@@ -3,10 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingBag, Settings } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState } from "react";
 
 const mainNavItems = [
@@ -20,10 +19,7 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  // TODO: Check if user is admin from database
-  const isAdmin = false;
-  
+
   // Determine active section
   const isActive = (path: string) => {
     if (path === "/services/social-media" && pathname?.startsWith("/services/social-media")) return true;
@@ -64,7 +60,7 @@ export default function Header() {
           </nav>
         </div>
         
-        {/* Right section with search and user controls */}
+        {/* Right section with search and actions */}
         <div className="flex items-center ml-auto gap-6">
           {/* Search bar */}
           <div className="hidden md:block relative">
@@ -80,14 +76,10 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Action buttons */}
-          <div className="hidden md:flex items-center gap-2">
-          </div>
-          
-          {/* User account section */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button className="green-gradient-bg">
-              Get Started
+            <Button size="sm" className="brand-gradient text-white border-0 hover-lift" asChild>
+              <Link href="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
@@ -104,6 +96,10 @@ export default function Header() {
             <Search className="h-5 w-5" />
           </Button>
 
+          {/* Mobile CTA */}
+          <Button size="sm" className="brand-gradient text-white border-0" asChild>
+            <Link href="/contact">Start</Link>
+          </Button>
 
           {/* Mobile menu button */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>

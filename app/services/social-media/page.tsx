@@ -78,25 +78,25 @@ export default function SocialMediaServicesPage() {
       <Header />
       
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
             Social Media Services
           </h1>
-          <p className="text-xl text-gray-400 mb-12 max-w-3xl">
+          <p className="text-lg sm:text-xl text-gray-400 mb-8 md:mb-12 max-w-3xl">
             Boost your social media presence with our comprehensive range of services. Select a platform below to explore platform-specific services or browse our featured offerings.
           </p>
         </div>
       </div>
 
       {/* Platform Selection */}
-      <div className="container mx-auto px-4 mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-white">Select a Platform</h2>
-        <div className="flex flex-wrap gap-4 mb-12">
+      <div className="container mx-auto px-4 mb-8 md:mb-16">
+        <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-white">Select a Platform</h2>
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 md:gap-4 mb-8 md:mb-12">
           {platformButtons.map((platform) => (
-            <Link key={platform.name} href={platform.href}>
+            <Link key={platform.name} href={platform.href} className="w-full sm:w-auto">
               <Button 
-                className={`${platform.className} px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity`}
+                className={`${platform.className} w-full sm:w-auto px-4 sm:px-6 py-3 md:py-3 h-12 md:h-auto rounded-full font-medium hover:opacity-90 transition-opacity text-sm sm:text-base`}
               >
                 {platform.name}
               </Button>
@@ -106,19 +106,19 @@ export default function SocialMediaServicesPage() {
       </div>
 
       {/* Featured Platforms */}
-      <div className="container mx-auto px-4 mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-white">Featured Platforms</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+      <div className="container mx-auto px-4 mb-8 md:mb-16">
+        <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-white">Featured Platforms</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {featuredPlatforms.map((platform) => (
             <Card key={platform.name} className={`bg-gray-900 border-2 ${platform.borderColor} hover:shadow-xl transition-all`}>
-              <CardHeader>
-                <CardTitle className="text-xl text-white mb-2">{platform.name}</CardTitle>
-                <CardDescription className="text-gray-400 text-base leading-relaxed">
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl text-white mb-2">{platform.name}</CardTitle>
+                <CardDescription className="text-gray-400 text-sm md:text-base leading-relaxed">
                   {platform.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <Link href={platform.href} className="text-green-400 hover:text-green-300 font-medium">
+              <CardContent className="p-4 md:p-6 pt-0 md:pt-0">
+                <Link href={platform.href} className="text-green-400 hover:text-green-300 font-medium text-sm md:text-base inline-block py-2">
                   {platform.linkText}
                 </Link>
               </CardContent>
@@ -128,22 +128,22 @@ export default function SocialMediaServicesPage() {
       </div>
 
       {/* Featured Services */}
-      <div className="container mx-auto px-4 mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-white">Featured Services</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="container mx-auto px-4 mb-8 md:mb-16">
+        <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-white">Featured Services</h2>
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
           {featuredServices.map((service) => (
             <Card key={service.title} className="bg-gray-900 border-gray-800 hover:border-green-500/50 transition-all">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
+              <CardHeader className="p-4 md:p-6">
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
                   {service.icon}
-                  <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-lg md:text-xl text-white">{service.title}</CardTitle>
                 </div>
-                <CardDescription className="text-gray-400 text-base leading-relaxed">
+                <CardDescription className="text-gray-400 text-sm md:text-base leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="text-green-400 hover:text-green-300 font-medium cursor-pointer">
+              <CardContent className="p-4 md:p-6 pt-0 md:pt-0">
+                <div className="text-green-400 hover:text-green-300 font-medium cursor-pointer text-sm md:text-base inline-block py-2">
                   {service.linkText}
                 </div>
               </CardContent>

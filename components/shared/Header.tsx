@@ -36,10 +36,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 flex h-20 items-center">
+      <div className="container mx-auto px-4 flex h-16 md:h-20 items-center">
         <div className="flex items-center flex-shrink-0">
-          <Link href="/" className="flex items-center pl-8 pr-12">
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent logo-hover-effect">
+          <Link href="/" className="flex items-center pl-2 pr-4 md:pl-8 md:pr-12">
+            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent logo-hover-effect">
               inflnce.io
             </span>
           </Link>
@@ -157,7 +157,7 @@ export default function Header() {
             variant="ghost"
             size="icon"
             onClick={() => setSearchOpen(!searchOpen)}
-            className="text-muted-foreground"
+            className="text-muted-foreground h-10 w-10"
           >
             <Search className="h-5 w-5" />
           </Button>
@@ -167,20 +167,20 @@ export default function Header() {
           {/* Mobile menu button */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="h-10 w-10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-border">
-              <nav className="flex flex-col gap-4 mt-8">
+            <SheetContent side="right" className="bg-background border-border w-[280px] sm:w-[350px]">
+              <nav className="flex flex-col gap-2 mt-8">
                 {mainNavItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-base font-medium transition-colors hover:text-primary ${
-                      isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                    className={`text-base font-medium transition-colors hover:text-primary py-3 px-2 rounded-md hover:bg-gray-900/50 ${
+                      isActive(item.href) ? "text-primary bg-gray-900/30" : "text-muted-foreground"
                     }`}
                   >
                     {item.name}
@@ -189,18 +189,18 @@ export default function Header() {
                 
                 {isSignedIn ? (
                   <>
-                    <hr className="border-border" />
+                    <hr className="border-border my-2" />
                     <Link 
                       href="/dashboard" 
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
+                      className="text-base font-medium text-muted-foreground hover:text-primary py-3 px-2 rounded-md hover:bg-gray-900/50"
                     >
                       Dashboard
                     </Link>
                     <Link 
                       href="/dashboard/orders" 
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
+                      className="text-base font-medium text-muted-foreground hover:text-primary py-3 px-2 rounded-md hover:bg-gray-900/50"
                     >
                       My Orders
                     </Link>
@@ -208,7 +208,7 @@ export default function Header() {
                       <Link 
                         href="/admin" 
                         onClick={() => setMobileMenuOpen(false)}
-                        className="text-base font-medium text-muted-foreground hover:text-primary"
+                        className="text-base font-medium text-muted-foreground hover:text-primary py-3 px-2 rounded-md hover:bg-gray-900/50"
                       >
                         Admin Panel
                       </Link>
@@ -216,21 +216,35 @@ export default function Header() {
                   </>
                 ) : (
                   <>
-                    <hr className="border-border" />
-                    <Link 
-                      href="/sign-in" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      Sign In
-                    </Link>
-                    <Link 
-                      href="/sign-up" 
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium text-muted-foreground hover:text-primary"
-                    >
-                      Get Started
-                    </Link>
+                    <hr className="border-border my-2" />
+                    <div className="flex flex-col gap-3 mt-4">
+                      <Link 
+                        href="/contact" 
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-base font-medium text-muted-foreground hover:text-primary py-3 px-2 rounded-md hover:bg-gray-900/50"
+                      >
+                        Contact
+                      </Link>
+                      <Button 
+                        size="lg" 
+                        variant="outline"
+                        className="w-full border-gray-600 text-gray-300 hover:bg-gray-800 h-12"
+                        asChild
+                      >
+                        <Link href="/sign-in" onClick={() => setMobileMenuOpen(false)}>
+                          Sign In
+                        </Link>
+                      </Button>
+                      <Button 
+                        size="lg" 
+                        className="w-full green-gradient-bg h-12"
+                        asChild
+                      >
+                        <Link href="/sign-up" onClick={() => setMobileMenuOpen(false)}>
+                          Get Started
+                        </Link>
+                      </Button>
+                    </div>
                   </>
                 )}
               </nav>
@@ -240,17 +254,17 @@ export default function Header() {
         
         {/* Mobile search bar */}
         {searchOpen && (
-          <div className="absolute top-20 left-0 right-0 p-4 bg-background border-b border-border z-50 lg:hidden">
+          <div className="absolute top-16 left-0 right-0 p-4 bg-background border-b border-border z-50 lg:hidden">
             <div className="relative">
               <Input
                 type="search"
                 placeholder="Search services, tools..."
-                className="w-full pl-9"
+                className="w-full pl-10 h-12 text-base"
                 autoFocus
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             </div>
           </div>
         )}

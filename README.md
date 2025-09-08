@@ -1,4 +1,4 @@
-# Inflnce - B2B Digital Service Wholesale Platform
+# inflnce.io - B2B Digital Service Wholesale Platform
 
 A premium B2B wholesale platform for digital marketing and social media services built with Next.js, TypeScript, Convex, and Clerk.
 

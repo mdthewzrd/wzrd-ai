@@ -16,196 +16,41 @@
    - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 1856ms
+ ✓ Ready in 2.2s
  ○ Compiling /middleware ...
- ✓ Compiled /middleware in 786ms (221 modules)
+ ✓ Compiled /middleware in 1295ms (221 modules)
  ○ Compiling / ...
 <w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (172kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
 
 
 Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
 Setting up new context...
-Finding changed files: 9.338ms
-Reading changed files: 205.892ms
-Sorting candidates: 2.575ms
-Generate rules: 102.971ms
-Build stylesheet: 4.374ms
-Potential classes:  3321
+Finding changed files: 13.456ms
+Reading changed files: 219.594ms
+Sorting candidates: 5.121ms
+Generate rules: 146.971ms
+Build stylesheet: 4.429ms
+Potential classes:  3360
 Active contexts:  1
-JIT TOTAL: 453.793ms
+JIT TOTAL: 569.235ms
 
 
- ✓ Compiled / in 5.2s (1397 modules)
-
-[35m
-[Clerk]:[0m You are running in keyless mode.
-You can [35mclaim your keys[0m by visiting https://dashboard.clerk.com/apps/claim?token=wq7idyjubs59tmk7cj05zy73o9876yzmss0rrseq&return_url=http%3A%2F%2Flocalhost%3A3000%2F
-
- GET / 200 in 5894ms
+ ✓ Compiled / in 10.5s (1132 modules)
+ GET / 200 in 8295ms
+ GET / 200 in 2673ms
+ GET / 200 in 11785ms
 
 
 Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 4.794ms
-Reading changed files: 0.036ms
-Sorting candidates: 0.008ms
-Generate rules: 0.115ms
-Build stylesheet: 0.006ms
+Finding changed files: 4.075ms
+Reading changed files: 0.013ms
+Sorting candidates: 0.005ms
+Generate rules: 0.085ms
+Build stylesheet: 0.002ms
 Potential classes:  1
 Active contexts:  1
-JIT TOTAL: 35.34ms
+JIT TOTAL: 34.937ms
 
 
- ✓ Compiled in 1318ms (518 modules)
- GET / 200 in 138ms
- ✓ Compiled /favicon.ico in 324ms (875 modules)
- GET /favicon.ico 200 in 439ms
- POST / 200 in 78ms
- GET / 200 in 96ms
- POST / 303 in 600ms
- GET / 200 in 36ms
- GET / 200 in 40ms
- ✓ Compiled /sign-up/[[...sign-up]] in 450ms (1379 modules)
- GET /sign-up 200 in 1291ms
- GET /sign-up/SignUp_clerk_catchall_check_1757091562309 200 in 219ms
- ✓ Compiled /dashboard in 394ms (1408 modules)
- GET /dashboard 200 in 727ms
- ○ Compiling /services/publications ...
- ✓ Compiled /services/publications in 550ms (1454 modules)
- GET /services/publications 200 in 709ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 4.414ms
-Reading changed files: 7.756ms
-Sorting candidates: 0.39ms
-Generate rules: 5.778ms
-Build stylesheet: 1.844ms
-Potential classes:  1016
-Active contexts:  1
-JIT TOTAL: 34.475ms
-
-
- ✓ Compiled in 665ms (1464 modules)
- GET /services/publications 200 in 197ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 10.42ms
-Reading changed files: 7.358ms
-Sorting candidates: 0.045ms
-Generate rules: 0.981ms
-Build stylesheet: 0.001ms
-Potential classes:  74
-Active contexts:  1
-JIT TOTAL: 74.699ms
-
-
- ✓ Compiled in 898ms (1447 modules)
-
-[35m
-[Clerk]:[0m You are running in keyless mode.
-You can [35mclaim your keys[0m by visiting https://dashboard.clerk.com/apps/claim?token=wq7idyjubs59tmk7cj05zy73o9876yzmss0rrseq&return_url=http%3A%2F%2Flocalhost%3A3000%2F
-
- GET /services/publications 200 in 190ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 3.88ms
-Reading changed files: 6.306ms
-Sorting candidates: 0.027ms
-Generate rules: 0.277ms
-Build stylesheet: 0.001ms
-Potential classes:  65
-Active contexts:  1
-JIT TOTAL: 30.363ms
-
-
- ✓ Compiled in 461ms (1461 modules)
- GET /services/publications 200 in 254ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 4.524ms
-Reading changed files: 8.529ms
-Sorting candidates: 0.256ms
-Generate rules: 1.752ms
-Build stylesheet: 0.004ms
-Potential classes:  351
-Active contexts:  1
-JIT TOTAL: 33.698ms
-
-
- ✓ Compiled in 492ms (1461 modules)
- GET /services/publications 200 in 114ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 2.896ms
-Reading changed files: 9.081ms
-Sorting candidates: 0.346ms
-Generate rules: 1.554ms
-Build stylesheet: 0.009ms
-Potential classes:  461
-Active contexts:  1
-JIT TOTAL: 33.525ms
-
-
- ✓ Compiled in 450ms (1461 modules)
- GET /services/publications 200 in 124ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 2.639ms
-Reading changed files: 7.413ms
-Sorting candidates: 0.371ms
-Generate rules: 1.435ms
-Build stylesheet: 0.003ms
-Potential classes:  463
-Active contexts:  1
-JIT TOTAL: 27.138ms
-
-
- ✓ Compiled in 409ms (1461 modules)
- GET /services/publications 200 in 117ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 2.728ms
-Reading changed files: 5.625ms
-Sorting candidates: 0.17ms
-Generate rules: 0.906ms
-Build stylesheet: 0.001ms
-Potential classes:  464
-Active contexts:  1
-JIT TOTAL: 20.952ms
-
-
- ✓ Compiled in 381ms (1461 modules)
- GET /services/publications 200 in 121ms
-
-
-Source path: /Users/michaeldurante/wzrd ai/.conductor/inflncesite/app/globals.css
-Finding changed files: 2.484ms
-Reading changed files: 6.454ms
-Sorting candidates: 0.284ms
-Generate rules: 1.093ms
-Build stylesheet: 0.002ms
-Potential classes:  466
-Active contexts:  1
-JIT TOTAL: 23.147ms
-
-
- ✓ Compiled in 328ms (1461 modules)
- GET /services/publications 200 in 107ms
-
-[35m
-[Clerk]:[0m You are running in keyless mode.
-You can [35mclaim your keys[0m by visiting https://dashboard.clerk.com/apps/claim?token=wq7idyjubs59tmk7cj05zy73o9876yzmss0rrseq&return_url=http%3A%2F%2Flocalhost%3A3000%2F
-
- GET / 200 in 738ms
- ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 635ms (919 modules)
- GET /favicon.ico 200 in 787ms
- POST / 200 in 98ms
- POST / 200 in 13ms
-[?25h
+ ✓ Compiled in 1614ms (389 modules)
+ GET / 200 in 48ms

@@ -34,36 +34,36 @@ export const servicesData: Service[] = [
         name: "Bronze",
         price: 169,
         deliverables: [
-          "300-400+ likes per post (typical)",
-          "3k-4k views per post (typical)",
-          "30-50+ saves (typical)",
-          "10-20+ shares (typical)",
+          "300-400+ likes per post",
+          "3k-4k views per post",
+          "30-50+ saves",
+          "10-20+ shares",
           "10 comments × 15 posts",
-          "+500 followers monthly (typical)"
+          "+500 followers monthly"
         ]
       },
       {
         name: "Silver",
         price: 249,
         deliverables: [
-          "700-1k+ likes per post (typical)",
-          "5k-10k views per post (typical)",
-          "50-100 saves (typical)",
-          "25-50 shares (typical)",
+          "700-1k+ likes per post",
+          "5k-10k views per post",
+          "50-100 saves",
+          "25-50 shares",
           "15 comments × 20 posts",
-          "+1k followers monthly (typical)"
+          "+1k followers monthly"
         ]
       },
       {
         name: "Gold",
         price: 369,
         deliverables: [
-          "1.5k-3k likes per post (typical)",
-          "7.5k-15k views per post (typical)",
-          "100-200 saves (typical)",
-          "50-100 shares (typical)",
+          "1.5k-3k likes per post",
+          "7.5k-15k views per post",
+          "100-200 saves",
+          "50-100 shares",
           "20 comments × 25 posts",
-          "+2k followers monthly (typical)"
+          "+2k followers monthly"
         ],
         highlight: true
       },
@@ -71,36 +71,36 @@ export const servicesData: Service[] = [
         name: "Emerald",
         price: 499,
         deliverables: [
-          "3k-4k likes per post (typical)",
-          "10k-25k views per post (typical)",
-          "200-400 saves (typical)",
-          "100-200 shares (typical)",
+          "3k-4k likes per post",
+          "10k-25k views per post",
+          "200-400 saves",
+          "100-200 shares",
           "30 comments × 30 posts",
-          "+4k followers monthly (typical)"
+          "+4k followers monthly"
         ]
       },
       {
         name: "Platinum",
         price: 749,
         deliverables: [
-          "5k-8k likes per post (typical)",
-          "25k-50k views per post (typical)",
-          "400-600 saves (typical)",
-          "200-400 shares (typical)",
+          "5k-8k likes per post",
+          "25k-50k views per post",
+          "400-600 saves",
+          "200-400 shares",
           "40 comments × 30 posts",
-          "+10k international followers monthly (typical)"
+          "+10k international followers monthly"
         ]
       },
       {
         name: "Diamond",
         price: 1499,
         deliverables: [
-          "8k-12k likes per post (typical)",
-          "50k-100k views per post (typical)",
-          "600-1k saves (typical)",
-          "300-500 shares (typical)",
+          "8k-12k likes per post",
+          "50k-100k views per post",
+          "600-1k saves",
+          "300-500 shares",
           "50 comments × 30 posts",
-          "+20k international followers monthly (typical)"
+          "+20k international followers monthly"
         ]
       }
     ]
@@ -118,7 +118,7 @@ export const servicesData: Service[] = [
       {
         name: "Bronze",
         price: 24.99,
-        deliverables: ["300-400 likes (typical)", "3k-4k views (typical)", "30-50 saves (typical)", "10-20 shares (typical)", "10 comments"]
+        deliverables: ["300-400 likes", "3k-4k views", "30-50 saves", "10-20 shares", "10 comments"]
       },
       {
         name: "Silver",
@@ -216,33 +216,33 @@ export const servicesData: Service[] = [
       {
         name: "Bronze",
         price: 39.99,
-        deliverables: ["2.5k views (typical)", "200-300 likes (typical)", "20-30 shares (typical)", "5-10 comments"]
+        deliverables: ["2.5k views", "200-300 likes", "20-30 shares", "5-10 comments"]
       },
       {
         name: "Silver",
         price: 69.99,
-        deliverables: ["5k views (typical)", "400-500 likes (typical)", "50-60 shares (typical)", "10-15 comments"]
+        deliverables: ["5k views", "400-500 likes", "50-60 shares", "10-15 comments"]
       },
       {
         name: "Gold",
         price: 109.99,
-        deliverables: ["10k views (typical)", "700-800 likes (typical)", "100-150 shares (typical)", "20-30 comments"],
+        deliverables: ["10k views", "700-800 likes", "100-150 shares", "20-30 comments"],
         highlight: true
       },
       {
         name: "Emerald",
         price: 199.99,
-        deliverables: ["25k views (typical)", "1k-1.5k likes (typical)", "300-400 shares (typical)", "40-50 comments"]
+        deliverables: ["25k views", "1k-1.5k likes", "300-400 shares", "40-50 comments"]
       },
       {
         name: "Platinum",
         price: 349.99,
-        deliverables: ["50k views (typical)", "2k-3k likes (typical)", "800-1k shares (typical)", "80-100 comments"]
+        deliverables: ["50k views", "2k-3k likes", "800-1k shares", "80-100 comments"]
       },
       {
         name: "Diamond",
         price: 499.99,
-        deliverables: ["100k views (typical)", "4k-5k likes (typical)", "1.5k-2k shares (typical)", "140-160 comments"]
+        deliverables: ["100k views", "4k-5k likes", "1.5k-2k shares", "140-160 comments"]
       }
     ]
   },

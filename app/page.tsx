@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         
         {/* Floating Social Media Icons - Mobile optimized */}
-        <div className="absolute inset-0 pointer-events-none z-10 hidden md:block">
+        <div className="absolute inset-0 pointer-events-none z-0 hidden md:block">
           {/* Desktop floating icons */}
           <div className="absolute top-1/4 left-[15%] p-3 rounded-2xl bg-gradient-to-r from-purple-500/15 to-pink-500/15 backdrop-blur-sm border border-white/5 animate-float shadow-xl shadow-purple-500/5">
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-xl p-2.5 flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         
         {/* Mobile background floating icons */}
-        <div className="absolute inset-0 pointer-events-none md:hidden overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none md:hidden overflow-hidden z-0">
           <div className="absolute top-[15%] left-[10%] opacity-30">
             <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-orange-400/40 rounded-lg p-2 flex items-center justify-center">
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="container relative mx-auto px-4 text-center">
+        <div className="container relative mx-auto px-4 text-center z-10">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-green-400 border border-green-400/30 bg-green-400/10 mb-6 shadow-lg">

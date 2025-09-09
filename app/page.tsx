@@ -63,7 +63,7 @@ export default function Home() {
         
         {/* Mobile background floating icons */}
         <div className="absolute inset-0 pointer-events-none md:hidden overflow-hidden z-0">
-          <div className="absolute top-[15%] left-[10%] opacity-30">
+          <div className="absolute top-[15%] left-[10%] opacity-50">
             <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-orange-400/40 rounded-lg p-2 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-white/60 fill-current">
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="absolute top-[10%] right-[15%] opacity-25">
+          <div className="absolute top-[10%] right-[15%] opacity-45">
             <div className="p-2 rounded-lg bg-red-500/10">
               <div className="w-12 h-12 bg-red-600/40 rounded-lg p-2 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-7 h-7 text-white/60 fill-current">
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="absolute bottom-[45%] left-[5%] opacity-20">
+          <div className="absolute bottom-[45%] left-[5%] opacity-40">
             <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500/10 to-pink-500/10">
               <div className="w-11 h-11 bg-gradient-to-br from-cyan-400/40 to-pink-500/40 rounded-lg p-2 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-white/60 fill-current">
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="absolute top-[55%] right-[10%] opacity-25">
+          <div className="absolute top-[55%] right-[10%] opacity-45">
             <div className="p-2 rounded-lg bg-blue-500/10">
               <div className="w-10 h-10 bg-blue-500/40 rounded-lg p-2 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-white/60 fill-current">
@@ -103,7 +103,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="absolute bottom-[20%] right-[20%] opacity-20">
+          <div className="absolute bottom-[20%] right-[20%] opacity-40">
             <div className="p-2 rounded-lg bg-green-500/10">
               <div className="w-11 h-11 bg-green-500/40 rounded-lg p-2 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-white/60 fill-current">
@@ -142,7 +142,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 border-gray-600 text-gray-300 hover:bg-gray-800 text-base sm:text-lg shadow-xl" style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.6)' }} asChild>
+              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 border-gray-600 bg-gray-900 text-gray-300 hover:bg-gray-800 text-base sm:text-lg shadow-xl" style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.6)', backgroundColor: 'rgb(17, 24, 39)' }} asChild>
                 <Link href="/services">
                   Learn More
                 </Link>
@@ -351,7 +351,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 border-gray-600 text-gray-300 hover:bg-gray-800 text-base sm:text-lg shadow-xl" style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.6)' }} asChild>
+              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 border-gray-600 bg-gray-900 text-gray-300 hover:bg-gray-800 text-base sm:text-lg shadow-xl" style={{ boxShadow: '0 4px 15px rgba(0,0,0,0.6)', backgroundColor: 'rgb(17, 24, 39)' }} asChild>
                 <Link href="/services">
                   Learn More
                 </Link>

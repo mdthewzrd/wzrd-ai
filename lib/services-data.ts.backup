@@ -209,40 +209,40 @@ export const servicesData: Service[] = [
     category: "socialMedia",
     platform: "youtube",
     service: "YouTube Long-Form Video Campaigns",
-    description: "Complete engagement packages for YouTube videos. Typical results based on previous campaigns:",
+    description: "Complete engagement packages for YouTube videos",
     icon: "youtube",
     gradient: "youtube-gradient",
     packages: [
       {
         name: "Bronze",
         price: 39.99,
-        deliverables: ["2.5k views (typical)", "200-300 likes (typical)", "20-30 shares (typical)", "5-10 comments"]
+        deliverables: ["2.5k views", "200-300 likes", "20-30 shares", "5-10 comments"]
       },
       {
         name: "Silver",
         price: 69.99,
-        deliverables: ["5k views (typical)", "400-500 likes (typical)", "50-60 shares (typical)", "10-15 comments"]
+        deliverables: ["5k views", "400-500 likes", "50-60 shares", "10-15 comments"]
       },
       {
         name: "Gold",
         price: 109.99,
-        deliverables: ["10k views (typical)", "700-800 likes (typical)", "100-150 shares (typical)", "20-30 comments"],
+        deliverables: ["10k views", "700-800 likes", "100-150 shares", "20-30 comments"],
         highlight: true
       },
       {
         name: "Emerald",
         price: 199.99,
-        deliverables: ["25k views (typical)", "1k-1.5k likes (typical)", "300-400 shares (typical)", "40-50 comments"]
+        deliverables: ["25k views", "1k-1.5k likes", "300-400 shares", "40-50 comments"]
       },
       {
         name: "Platinum",
         price: 349.99,
-        deliverables: ["50k views (typical)", "2k-3k likes (typical)", "800-1k shares (typical)", "80-100 comments"]
+        deliverables: ["50k views", "2k-3k likes", "800-1k shares", "80-100 comments"]
       },
       {
         name: "Diamond",
         price: 499.99,
-        deliverables: ["100k views (typical)", "4k-5k likes (typical)", "1.5k-2k shares (typical)", "140-160 comments"]
+        deliverables: ["100k views", "4k-5k likes", "1.5k-2k shares", "140-160 comments"]
       }
     ]
   },
@@ -453,7 +453,7 @@ export const servicesData: Service[] = [
     platform: "spotify",
     service: "Spotify Song Campaigns",
     description: "14-30 day streaming campaigns for your tracks",
-    notes: "Campaign includes organic promotion strategies. Typical results based on previous campaigns:",
+    notes: "Includes algorithm-driven streams on higher tiers",
     icon: "spotify",
     gradient: "spotify-gradient",
     packages: [
@@ -566,7 +566,7 @@ export const servicesData: Service[] = [
     platform: "various",
     service: "Online Publication Placements",
     description: "Get featured in major online publications",
-    notes: "Professional media placement services. Results vary by publication and campaign strategy:",
+    notes: "Turnaround time varies by outlet. Includes article writing.",
     packages: [
       {
         name: "Tier 3 Publications",

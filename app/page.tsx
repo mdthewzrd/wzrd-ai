@@ -211,15 +211,15 @@ export default function Home() {
               <CardContent className="space-y-3 px-6">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">Press release distribution</span>
+                  <span className="text-gray-300">Media distribution services</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">Featured articles</span>
+                  <span className="text-gray-300">Brand storytelling campaigns</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">Industry-specific publications</span>
+                  <span className="text-gray-300">Strategic media placements</span>
                 </div>
                 <Link href="/services/publications" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium mt-6 py-2 text-sm sm:text-base">
                   Explore Publications
@@ -244,15 +244,15 @@ export default function Home() {
               <CardContent className="space-y-3 px-6">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">SEO optimization</span>
+                  <span className="text-gray-300">Search visibility optimization</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">Web development</span>
+                  <span className="text-gray-300">Digital infrastructure solutions</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-gray-300">Knowledge panel creation</span>
+                  <span className="text-gray-300">Brand authority development</span>
                 </div>
                 <Link href="/services/tools" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium mt-6 py-2 text-sm sm:text-base">
                   Explore Tools

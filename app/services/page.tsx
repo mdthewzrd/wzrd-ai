@@ -150,7 +150,7 @@ export default function ServicesPage() {
               </div>
               <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
                 <TrendingUp className="h-4 w-4 text-green-500" />
-                <span>99.9% Success Rate</span>
+                <span>Professional Excellence</span>
               </div>
             </div>
           </div>

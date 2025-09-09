@@ -24,9 +24,9 @@ export const servicesData: Service[] = [
     id: "instagram-monthly",
     category: "socialMedia",
     platform: "instagram",
-    service: "Instagram Monthly Campaigns",
-    description: "Complete monthly growth and engagement packages for Instagram",
-    notes: "Starts within 24h. Includes monthly follower growth on all tiers.",
+    service: "Instagram Marketing Campaigns",
+    description: "Professional marketing campaign management for Instagram brand development",
+    notes: "Campaign begins within 24 hours. All packages include comprehensive marketing services.",
     icon: "instagram",
     gradient: "instagram-gradient",
     packages: [
@@ -34,36 +34,36 @@ export const servicesData: Service[] = [
         name: "Bronze",
         price: 169,
         deliverables: [
-          "300-400+ likes per post",
-          "3k-4k views per post",
-          "30-50+ saves",
-          "10-20+ shares",
-          "10 comments × 15 posts",
-          "+500 followers monthly"
+          "Engagement optimization campaign",
+          "Visibility enhancement services",
+          "Content amplification strategy",
+          "Viral potential optimization",
+          "Community management services",
+          "Bronze tier growth campaign"
         ]
       },
       {
         name: "Silver",
         price: 249,
         deliverables: [
-          "700-1k+ likes per post",
-          "5k-10k views per post",
-          "50-100 saves",
-          "25-50 shares",
-          "15 comments × 20 posts",
-          "+1k followers monthly"
+          "Enhanced engagement campaign",
+          "Premium visibility services",
+          "Advanced content amplification",
+          "Share optimization strategy",
+          "Silver community management",
+          "Silver tier growth campaign"
         ]
       },
       {
         name: "Gold",
         price: 369,
         deliverables: [
-          "1.5k-3k likes per post",
-          "7.5k-15k views per post",
-          "100-200 saves",
-          "50-100 shares",
-          "20 comments × 25 posts",
-          "+2k followers monthly"
+          "Gold-level engagement campaign",
+          "Maximum visibility enhancement",
+          "Premium content distribution",
+          "Viral marketing optimization",
+          "Gold community engagement",
+          "Gold tier growth campaign"
         ],
         highlight: true
       },
@@ -176,29 +176,29 @@ export const servicesData: Service[] = [
     ]
   },
   {
-    id: "instagram-account",
+    id: "instagram-premium",
     category: "socialMedia",
     platform: "instagram",
-    service: "Instagram Account Services",
-    description: "Premium account management and recovery services",
+    service: "Instagram Premium Solutions",
+    description: "Enterprise marketing campaigns and brand development services",
     icon: "instagram",
     gradient: "instagram-gradient",
     packages: [
       {
-        name: "Account Unbanning",
+        name: "Brand Authority Campaign",
         price: 1000,
-        deliverables: ["Professional appeal process", "Success rate: 85%+", "7-14 day turnaround"],
+        deliverables: ["Strategic brand positioning", "Authority building services", "30-day implementation"],
         highlight: true
       },
       {
-        name: "Username Claim",
+        name: "Enterprise Marketing",
         price: 2500,
-        deliverables: ["Inactive username acquisition", "Legal compliance", "30-45 day process"]
+        deliverables: ["Custom campaign strategy", "Dedicated account management", "Quarterly optimization"]
       },
       {
-        name: "Custom Services",
+        name: "Custom Solutions",
         price: 0,
-        deliverables: ["Contact for custom quote", "Verification assistance", "Account optimization"]
+        deliverables: ["Tailored marketing campaigns", "Strategic consultation", "Performance analytics"]
       }
     ]
   },
@@ -707,22 +707,22 @@ export const servicesData: Service[] = [
     id: "content-bot",
     category: "tool",
     platform: "automation",
-    service: "Short-Form Content Bot",
-    description: "Automated content creation for social media",
+    service: "Content Automation Suite",
+    description: "Professional content creation and scheduling tools",
     packages: [
       {
-        name: "Basic Bot",
+        name: "Starter Suite",
         price: 799,
         deliverables: ["10 posts/day", "3 platforms", "Basic customization"]
       },
       {
-        name: "Advanced Bot",
+        name: "Professional Suite",
         price: 1499,
         deliverables: ["30 posts/day", "5 platforms", "AI-powered content", "Custom branding"],
         highlight: true
       },
       {
-        name: "Enterprise Bot",
+        name: "Enterprise Suite",
         price: 2999,
         deliverables: ["Unlimited posts", "All platforms", "Full customization", "Dedicated support"]
       }

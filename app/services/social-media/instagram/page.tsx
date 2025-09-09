@@ -76,7 +76,7 @@ export default async function InstagramServicesPage() {
           </div>
           <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-pink-500/30 p-4 rounded-lg text-center">
             <TrendingUp className="h-6 w-6 text-pink-400 mx-auto mb-2" />
-            <p className="text-sm font-medium text-white">Real Growth</p>
+            <p className="text-sm font-medium text-white">Organic Marketing</p>
           </div>
           <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-pink-500/30 p-4 rounded-lg text-center">
             <Star className="h-6 w-6 text-pink-400 mx-auto mb-2" />
@@ -106,11 +106,11 @@ export default async function InstagramServicesPage() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="text-base">Are the followers real?</CardTitle>
+                <CardTitle className="text-base">How does the marketing campaign work?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Yes, we use premium quality accounts that look and behave like real users. This ensures your account maintains credibility and avoids detection.
+                  Our marketing campaigns utilize strategic promotion techniques to enhance your brand visibility and reach your target audience effectively.
                 </p>
               </CardContent>
             </Card>
@@ -120,7 +120,7 @@ export default async function InstagramServicesPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Absolutely. We use gradual delivery methods that comply with Instagram&apos;s daily limits. Our services have a 99.9% safety record.
+                  Yes. Our marketing strategies follow industry best practices and focus on sustainable, long-term brand growth through professional promotion methods.
                 </p>
               </CardContent>
             </Card>

@@ -106,6 +106,7 @@ export default function TikTokServiceSelector({ services }: Props) {
                   </div>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-xs text-muted-foreground mb-3 font-medium">Typical results:</p>
                   <ul className="space-y-2">
                     {pkg.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm">
